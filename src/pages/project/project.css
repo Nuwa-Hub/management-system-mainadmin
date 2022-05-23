@@ -1,0 +1,60 @@
+.uproject{
+    flex: 5;
+}
+.uprojectwrapper{
+    margin: 10px;
+}
+.uprojecttop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.uprojecttoplefttitle{
+    font-size: 26px;
+    font-weight: 600;
+}
+.uprojecttopleftcompany{
+    font-size: 16px;
+    font-weight: 400;
+}
+.uprojectmid{
+    display: flex;
+    margin-top: 20px;
+}
+.uprojectdetail{
+    flex: 1;
+    padding: 20px;
+    height: 550px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+.uprojectanalys{
+    flex: 2;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75) ;
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75) ;
+    margin-left: 10px;
+  
+}
+
+.uprojectdetailtitle{
+    font-size: 18px;
+  font-weight: 600;
+  color: rgb(175, 170, 170);
+}
+.uprojectbottomtop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.uprojecttaskstitle{
+    font-size: 20px;
+    font-weight: 700;
+}
+.uprjectpagedevider{
+    margin-top: 10px;
+}
+.uprojectbottombody{
+    margin-top: 30px;
+}

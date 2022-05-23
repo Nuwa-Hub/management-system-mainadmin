@@ -1,0 +1,7 @@
+.inputfieldstyle.is-invalid{
+    border-color: red !important;
+}
+.error{
+    color: red ;
+    font-size: .6rem ;
+}

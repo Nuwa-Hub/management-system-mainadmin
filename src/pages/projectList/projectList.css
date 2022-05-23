@@ -1,0 +1,148 @@
+.project{
+  flex: 5 !important;
+ 
+}
+.projectpagetop{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+.projectpagetitle{
+  font-size: 28px;
+  font-weight: 700;
+}
+.createprojectbn{
+  width: 100px;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 18px;
+  background-color: rgb(46, 172, 172);
+}
+.projectShow {
+  padding: 5px; 
+}
+
+.projectShowTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.projectShowImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.projectShowTopTitle {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.userShowInfoTitle{
+  border-radius: 10px;
+  padding:2px 5px;
+}
+.projectShowprojectname {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.projectShowprojectTitle {
+  font-weight: 300;
+}
+.viewbutton{
+  width: 100px;
+  height: 40px;
+  color: rgb(113, 113, 243) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid !important;
+  border-width: 1px !important;
+  border-color: rgb(113, 113, 243) !important;
+  background-color: rgb(214, 226, 255);
+  padding: 5px;
+  border-radius: 5px !important;
+  margin-bottom: 10px;
+}
+.viewbuttontext{
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 5px;
+}
+.viewbuttonicon{
+  font-size: 16px !important;
+}
+.projectShowBottom {
+ 
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.projectShowdetail {
+  flex: 1;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-left: 5px;
+  -webkit-box-shadow: 0px 0px 5px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+.projectShowcontributors {
+  flex: 1;
+  margin-left: 5px;
+  flex-wrap: wrap;
+  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+  
+}
+.projectShowTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(175, 170, 170);
+}
+
+.projectShowInfo {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+  color: #444;
+}
+.userShowInfo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px 10px;
+  color: #444;
+  padding: 0 0px;
+}
+.projectShowIcon {
+  font-size: 16px !important;
+}
+.projectShowIcon.pending{
+  font-size: 16px !important;
+  color: red;
+  
+}
+.projectShowIcon.done{
+  font-size: 16px !important;
+  color: greenyellow;
+}
+.contributorImg {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.projectShowInfoTitle {
+  margin-left: 10px;
+}

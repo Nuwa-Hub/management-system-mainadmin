@@ -1,0 +1,83 @@
+.sendemailpage {
+  flex: 5;
+  display: flex;
+  justify-content: center;
+}
+.sendemailWrapper {
+  margin: 20px;
+  width: 70%;
+  height: 500px;
+  display: flex;
+  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+.emailpageleft {
+  flex: 2;
+}
+.emailpageright {
+  flex: 3;
+}
+.euserList {
+  height: 85%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.euserList::-webkit-scrollbar {
+  width: 8px;
+  background: rgba(0, 0, 0, 0);
+}
+.euserList::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.euser {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+.euserlImg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.eusertext {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.euserlname {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(140, 140, 140);
+}
+.euseremail {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgb(140, 140, 140);
+}
+.sendformwrapper{
+    margin:20px 20px;
+}
+.emailformItem{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.emailformItem label{
+    margin-bottom: 5px;
+}
+.emailformtitle{
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.emailformtext{
+    resize: vertical;
+    max-height:150px;
+}
+.send-emailtitle{
+    margin-bottom: 20px;
+}

@@ -1,0 +1,96 @@
+.sidebar {
+  flex: 1;
+  height: calc(90vh - 80px);
+  background-color: rgb(251, 251, 255);
+  position: sticky;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.logoutdiv{
+  margin: 40px 20px;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+.logoutIcon{
+  margin-right: 5px;
+  font-size: 20px !important;
+}
+.logoutdiv.active,
+.logoutdiv:hover {
+  background-color: rgb(240, 240, 255);
+}
+.sidebarWrapper {
+  padding: 20px;
+  color: #555;
+}
+
+.sidebarMenu {
+  margin-bottom: 10px;
+}
+
+.sidebarTitle {
+  font-size: 13px;
+  color: rgb(187, 186, 186);
+}
+
+.sidebarList {
+  list-style: none;
+  padding: 5px;
+}
+
+.sidebarListItem {
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.sidebarListItem.active,
+.sidebarListItem:hover {
+  background-color: rgb(240, 240, 255);
+}
+
+.sidebarIcon{
+    margin-right: 5px;
+    font-size: 20px !important;
+}
+.custom-ui{
+  border: 1px black solid;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.custom-ui div{
+  align-items: center;
+  justify-content: center;
+}
+.logout-text{
+  padding: 10px;
+}
+.logoutaction{
+  display: inline;
+  align-items: center;
+  justify-content: center;
+}
+.logoutaction button{
+   width: 100px;
+   height: 30px;
+   border-radius: 20px;
+   margin: 0px 40px;
+   border: none;
+}
+.logoutaction .yes{
+  background-color: orange;
+}
+.logoutaction .no{
+  background-color: rgb(255, 0, 0);
+}

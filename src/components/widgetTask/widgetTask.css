@@ -1,0 +1,58 @@
+.widgetTaskwrapper {
+  margin: 10px;
+}
+.widgetTasktitle {
+  font-size: 20px;
+  font-weight: 600;
+}
+.widgetTasktop {
+  display: flex;
+  justify-content: space-between;
+}
+.taskviewbutton {
+  width: 100px;
+  height: 40px;
+  color: rgb(113, 113, 243) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid !important;
+  border-width: 1px !important;
+  border-color: rgb(113, 113, 243) !important;
+  background-color: rgb(214, 226, 255);
+  padding: 5px;
+  border-radius: 5px !important;
+  margin-bottom: 10px;
+}
+.taskviewbutton:hover{
+    color: rgb(31, 31, 243) !important;
+    border-color: rgb(31, 31, 243) !important;
+}
+.taskviewbuttontext {
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 5px;
+}
+.taskviewbuttonicon {
+  font-size: 16px !important;
+}
+.widgetTaskbottom {
+  display: flex;
+  margin-top: 10px;
+}
+.widgetTaskleft {
+  flex: 1;
+}
+.widgetTaskright {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.taskcontributorImg {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
