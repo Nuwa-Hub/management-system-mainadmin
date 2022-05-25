@@ -5,6 +5,7 @@ import { routes } from "./routes";
 import { useSelector } from "react-redux";
 import Home from "./pages/home/Home";
 import ProtectedRoute from "./common/protectedRoute";
+import Register from "./pages/register/Register";
 
 function App() {
   const user = useSelector((state) => state.user.currentUser);
@@ -13,6 +14,7 @@ function App() {
     <BrowserRouter>
       <Routes>
        <Route exact path="/login" element={user ? <ProtectedRoute element={<Home/>}/>:<Login />} />
+       <Route exact path="/register" element={<Register/>} />
          {routes.map(({ element, path, name }) => (
           <Route
             key={name}
