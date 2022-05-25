@@ -1,5 +1,53 @@
-.loginerr{
-    margin-top: 10px;
-    font-size: 12px;
-    color: red;
+.loginerr {
+  margin-top: 10px;
+  font-size: 12px;
+  color: red;
+}
+.logincontainer {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+    ),
+    url("../../images/login.jpg")
+      center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginwrapper {
+    display: flex;
+    flex-direction: column;
+  width: 25%;
+  padding: 20px;
+  background-color: white;
+ 
+}
+.logintitlewrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 15px;
+}
+.loginlink{
+    font-size: 24px;
+    font-weight: 300;
+}
+.logintitle {
+    text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.loginbutton{
+    width: 40%;
+  border: none;
+  padding: 15px 20px;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+  margin:10px 0px;
+ 
+
 }

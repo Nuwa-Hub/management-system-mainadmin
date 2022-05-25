@@ -20,7 +20,7 @@ import TextField from "../../components/textField/TextField";
 export default function NewUser() {
   const [inputs, setInputs] = useState({});
   const [file, setFile] = useState(null);
-  console.log(inputs);
+ // console.log(inputs);
   const dispatch = useDispatch();
 
   const handleChange = (e) => {

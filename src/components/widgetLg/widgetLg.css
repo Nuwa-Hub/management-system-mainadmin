@@ -26,12 +26,15 @@
   
 }
 .dotIndicator{
-  margin-right: 2px;
+  margin-right: 5px;
   width: 6px;
   height: 6px;
-  color: rgb(235, 8, 8);
+  
   font-size: 14px !important;
 }
+.dotIndicator.manager{color: #0088FE;}
+.dotIndicator.developer{color: #00C49F;}
+.dotIndicator.admin{color: #FFBB28;}
 .chartItem{
   display: flex;
   justify-items: center;

@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { login } from "../../redux/apiCalls";
-import "./login.css"
+import "./login.css";
+import { Formik, Form } from "formik";
+import * as Yup from "yup";
+import TextField from "../../components/textField/TextField";
+
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -11,43 +15,89 @@ const Login = () => {
   //let navigate = useNavigate();
   const user = useSelector((state) => state.user.currentUser);
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    login(dispatch, { username, password });
+  const handleClick = (e, { resetForm }) => {
+    login(dispatch, e);
+    resetForm();
   };
-  console.log(error)
-  //if (user != null) navigate("/");
-  return (
-    <div
-   
-      style={{
-        
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <input
-        style={{ padding: 10, marginBottom: 20 }}
-        type="text"
-        placeholder="username"
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        style={{ padding: 10, marginBottom: 20 }}
-        type="password"
-        placeholder="password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
 
-      <button onClick={handleClick} style={{ padding: 10, width: 100 }}>
-        Login
-      </button>
-      {error && <span className="loginerr">Wrong username or password !!!</span>}
-     
-  
+  //if (user != null) navigate("/");
+  //validate
+  const phoneRegExp =
+    /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
+
+  const validate = Yup.object({
+    username: Yup.string()
+      .max(20, "Must be 20 characters or less!")
+      .required("Required"),
+    password: Yup.string().required("Required"),
+  });
+  return (
+    <div className="logincontainer">
+      <div className="loginwrapper">
+        <div className="logintitlewrapper">
+          <h1 className="logintitle">SIGN IN</h1>
+          <Link to={"/register"}>
+            <span className="loginlink">SIGN UP</span>
+          </Link>
+        </div>
+        <Formik
+          initialValues={{
+            username: "",
+            password: "",
+          }}
+          validationSchema={validate}
+          onSubmit={handleClick}
+        >
+          {({ values, isValid, dirty }) => (
+            <>
+              <Form
+                style={{
+            
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <TextField
+                  style={{
+                    width: 340,
+                    padding: 10,
+                    marginBottom: 5,
+                    marginTop: 10,
+                    
+                  }}
+                  type="text"
+                  placeholder="username"
+                  label="Username"
+                  name="username"
+                />
+                <TextField
+                  style={{
+                    width: 340,
+                    padding: 10,
+                    marginBottom: 5,
+                    marginTop: 10,
+                  }}
+                  type="password"
+                  placeholder="username"
+                  label="Password"
+                  name="password"
+                />
+
+                <button type="submit" className="loginbutton">
+                  Login
+                </button>
+                {error && (
+                  <span className="loginerr">
+                    Wrong username or password !!!
+                  </span>
+                )}
+              </Form>
+            </>
+          )}
+        </Formik>
+      </div>
     </div>
   );
 };

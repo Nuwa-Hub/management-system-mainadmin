@@ -50,17 +50,17 @@ const WidgetLg = () => {
           <span className="widgetLgTitle">User Analytics</span>
           <Piechart className="widgetLgchart" />
           <div className="chartItems">
-            <div className="chartItem">
-              <FiberManualRecordOutlinedIcon className="dotIndicator" />
-              <h3 className="chartItemText">completed projects</h3>
+          <div className="chartItem">
+              <FiberManualRecordOutlinedIcon className="dotIndicator manager" />
+              <h3 className="chartItemText">Managers</h3>
             </div>
             <div className="chartItem">
-              <FiberManualRecordOutlinedIcon className="dotIndicator" />
-              <h3 className="chartItemText">completed projects</h3>
+              <FiberManualRecordOutlinedIcon className="dotIndicator developer" />
+              <h3 className="chartItemText">Developers</h3>
             </div>
             <div className="chartItem">
-              <FiberManualRecordOutlinedIcon className="dotIndicator" />
-              <h3 className="chartItemText">pending projects</h3>
+              <FiberManualRecordOutlinedIcon className="dotIndicator admin" />
+              <h3 className="chartItemText">Admins</h3>
             </div>
           </div>
         </div>

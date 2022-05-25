@@ -1,0 +1,74 @@
+.registerconstainer {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("../../images/register.jpg")
+      center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.registerwrapper {
+  width: 40%;
+  padding: 20px;
+  background-color: white;
+}
+.registertitlewrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 6px;
+}
+.registerlink{
+    font-size: 24px;
+    font-weight: 300;
+}
+.registertitle {
+  font-size: 24px;
+  font-weight: 300;
+}
+.registerform {
+  display: flex;
+  flex-wrap: wrap;
+}
+.registerinput {
+  flex: 1;
+  min-width: 40%;
+  margin: 20px 10px 0px 0px;
+  padding: 10px;
+}
+.newregisterItem {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+  
+  .newregisterItem > label {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(151, 150, 150);
+  }
+  
+  .newregisterItem > input {
+    height: 30px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+.registerbtn {
+  width: 40%;
+  border: none;
+  padding: 15px 20px;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
