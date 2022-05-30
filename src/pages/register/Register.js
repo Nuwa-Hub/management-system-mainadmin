@@ -7,11 +7,10 @@ import { addUser } from "../../redux/apiCalls";
 import { useDispatch } from "react-redux";
 
 const Register = () => {
-
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
 
   const handleClick = (e, { resetForm }) => {
-    addUser(dispatch, {...e,isAdmin:true,ismainAdmin:true});
+    addUser(dispatch, { ...e, isAdmin: true, ismainAdmin: true });
     resetForm();
   };
 
@@ -37,7 +36,13 @@ const Register = () => {
       .max(25, "Must be 25 characters or less!")
       .required("Required"),
     birthday: Yup.string().required("Required"),
-    password: Yup.string().required("Required"),
+    password: Yup.string()
+      .matches("(?=.*?[A-Z])", "at least one uppercase letter")
+      .matches("(?=.*?[a-z])", "at least one lower letter")
+      .matches("(?=.*?[0-9])", "at least one digit")
+      .matches("(?=.*?[#?!@$%^&*-])", "at least one special character")
+      .matches(".{8,}", "at least 8 characters")
+      .required("Requered!"),
   });
   return (
     <div className="registerconstainer">

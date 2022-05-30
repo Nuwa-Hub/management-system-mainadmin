@@ -14,13 +14,13 @@ const ChangePassword = () => {
   const userId = useSelector((state) => state.user.currentUser);
 
   const handleClick = (e, { resetForm }) => {
-      const data={
-          userId:userId._id,
-          currentPassword:e.currentPassword,
-          newPassword:e.newPassword,
-      }
-      console.log(data)
-    changePassword(dispatch,data)
+    const data = {
+      userId: userId._id,
+      currentPassword: e.currentPassword,
+      newPassword: e.newPassword,
+    };
+    console.log(data);
+    changePassword(dispatch, data);
     resetForm();
   };
 
@@ -30,10 +30,11 @@ const ChangePassword = () => {
       .max(25, "Must be 25 characters or less!")
       .required("Requered!"),
     newPassword: Yup.string()
-       .matches(
-        "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$",
-        "Must Contain One Uppercase"
-      )
+      .matches("(?=.*?[A-Z])", "at least one uppercase letter")
+      .matches("(?=.*?[a-z])", "at least one lower letter")
+      .matches("(?=.*?[0-9])", "at least one digit")
+      .matches("(?=.*?[#?!@$%^&*-])", "at least one special character")
+      .matches(".{8,}", "at least 8 characters")
       .required("Requered!"),
     confirmPassword: Yup.string()
       .required("Requered!")
@@ -57,7 +58,6 @@ const ChangePassword = () => {
               onSubmit={handleClick}
             >
               {({ values, isValid, dirty }) => (
-                 
                 <>
                   <h1 className="newProjectTitle">Change Password</h1>
                   <Form className="newProjectForm">
